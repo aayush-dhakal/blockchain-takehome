@@ -1,5 +1,13 @@
 # React + Vite
 
+## Live Preview:
+
+https://blockchain-takehome.vercel.app/
+
+### Third party library
+
+- Moralis: Used this bacause of its Simplified Development. It is used to get the fungible tokens.
+
 ### Local Setup
 
 - Setup an account in Moralis https://moralis.io and get the api key. Rename the .env.example file to .env and paste you api key there.
