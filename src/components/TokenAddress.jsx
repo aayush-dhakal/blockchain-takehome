@@ -1,22 +1,31 @@
 import { useEffect, useState } from "react";
 import Moralis from "moralis";
 import { EvmChain } from "@moralisweb3/common-evm-utils";
+import initializeMoralis from "../utils/initializeMoralis";
 
 const TokenAddress = ({ walletAddress }) => {
   const [showResult, setShowResult] = useState(false);
   const [address, setAddress] = useState(walletAddress);
   const [result, setResult] = useState([]);
+  const [error, setError] = useState("");
 
   const handleSubmit = async () => {
     const chain = EvmChain.ETHEREUM;
 
-    const response = await Moralis.EvmApi.token.getWalletTokenBalances({
-      address,
-      chain,
-    });
+    try {
+      const response = await Moralis.EvmApi.token.getWalletTokenBalances({
+        address,
+        chain,
+      });
 
-    setResult(response.toJSON());
-    setShowResult(true);
+      setResult(response.toJSON());
+      setError("");
+      setShowResult(true);
+    } catch (error) {
+      console.error(error);
+      setError("Error on api call");
+      initializeMoralis(import.meta.env.VITE_PUBLIC_MORALIS_API_KEY);
+    }
   };
 
   useEffect(() => {
@@ -65,6 +74,8 @@ const TokenAddress = ({ walletAddress }) => {
         {showResult && result.length === 0 && (
           <div className="mt-3">You have no tokens</div>
         )}
+
+        {error && <div className="error-message mt-3">{error}</div>}
       </section>
     </section>
   );

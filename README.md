@@ -1,6 +1,6 @@
 # React + Vite
 
-### Setup
+### Local Setup
 
 - Setup an account in Moralis https://moralis.io and get the api key. Rename the .env.example file to .env and paste you api key there.
 - Clone this repo and run `npm install` to download dependencies.
