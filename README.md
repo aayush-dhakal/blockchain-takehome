@@ -19,3 +19,14 @@ https://blockchain-takehome.vercel.app/
 
 - 0x5AE5041a09711AB926734734Dc8aF07Fe31A3BB5
 - 0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+
+### Screenshots
+
+Initialize Wallet Connection
+![](https://github.com/aayush-dhakal/blockchain-takehome/blob/master/screenshots/Initialize-Wallet-Connection.png?raw=true)
+
+Wallet Connected
+![](https://github.com/aayush-dhakal/blockchain-takehome/blob/master/screenshots/Wallet-connected.png?raw=true)
+
+Display the token name and address
+![](https://github.com/aayush-dhakal/blockchain-takehome/blob/master/screenshots/Display-Tokens.png?raw=true)
