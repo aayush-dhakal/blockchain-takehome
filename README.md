@@ -4,6 +4,10 @@
 
 https://blockchain-takehome.vercel.app/
 
+### Supported blockchain
+
+- Ethereum
+
 ### Third party library
 
 - Moralis: Used this bacause of its Simplified Development. It is used to get the fungible tokens.
